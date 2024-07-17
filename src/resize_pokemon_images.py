@@ -15,7 +15,7 @@ def get_subset_of_relevant_pokemon(EXTERNAL_DATA_PATH, TARGET_POKEMON_TYPE):
     pokemon = pd.read_csv(PROJECT_ROOT / EXTERNAL_DATA_PATH / 'Pokedex_Cleaned.csv', encoding='latin-1', engine='python')
     pokemon = pokemon[["#", "Name", "Primary Type", "Secondary Type"]]
 
-    if not TARGET_POKEMON_TYPE in ['all', 'none', '']:
+    if TARGET_POKEMON_TYPE not in ['all', 'none', '']:
         # Make columns lowercase
         pokemon['Primary Type']= pokemon['Primary Type'].str.lower()
         pokemon['Secondary Type']= pokemon['Primary Type'].str.lower()

@@ -1,12 +1,10 @@
 import argparse
-import matplotlib.pyplot as plt
 import os
 import shutil
 import torch
 import yaml
 
-from diffusers import DDIMScheduler, DiffusionPipeline, StableDiffusionPipeline, DPMSolverMultistepScheduler
-
+from diffusers import DDIMScheduler, DiffusionPipeline
 from utils.find_project_root import find_project_root
 
 def set_up_pipeline(BASE_MODEL, LORA_PATH, USE_LORA=True):
