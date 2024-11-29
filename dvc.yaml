@@ -2,7 +2,7 @@ stages:
   set_up_diffusers:
     cmd: |
       git clone --depth 1 --branch v0.14.0 https://github.com/huggingface/diffusers.git diffusers
-      pip3.10 install -r "diffusers/examples/dreambooth/requirements.txt"
+      python -m pip install-r "diffusers/examples/dreambooth/requirements.txt"
       accelerate config default
     outs:
     - diffusers:

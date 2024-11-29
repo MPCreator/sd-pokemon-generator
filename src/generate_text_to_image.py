@@ -15,8 +15,8 @@ def set_up_pipeline(BASE_MODEL, LORA_PATH, USE_LORA=True):
 
     # These settings work for Apple M1/M2 silicon
     # Docs for configuring to your hardware: https://huggingface.co/docs/diffusers/optimization/fp16
-    pipe.to("mps")
-
+    #pipe.to("mps")
+    pipe.to("cuda") 
     # Recommended if your computer has < 64 GB of RAM
     pipe.enable_attention_slicing()
 
